@@ -2,7 +2,7 @@ package chromaconsole;
 
 public class color {
     public static String text(int r, int g, int b) {
-        if (ChromaConsole.enabled == true){
+        if (style.enabled == true){
             return String.format("\033[38;2;%d;%d;%dm", r, g, b);
         }
         else {
@@ -11,7 +11,7 @@ public class color {
     }
 
     public static String text(String color) {
-        if (ChromaConsole.enabled == true){
+        if (style.enabled == true){
             // Remove any leading '#' if present
             if (color.startsWith("#")) {
                 color = color.substring(1);
@@ -41,7 +41,7 @@ public class color {
     }
 
     public static String background(int r, int g, int b) {
-        if (ChromaConsole.enabled == true){
+        if (style.enabled == true){
             return String.format("\033[48;2;%d;%d;%dm", r, g, b);
         }
         else {
@@ -50,7 +50,7 @@ public class color {
     }
 
     public static String background(String color) {
-        if (ChromaConsole.enabled == true){
+        if (style.enabled == true){
             // Remove any leading '#' if present
             if (color.startsWith("#")) {
                 color = color.substring(1);

@@ -4,11 +4,11 @@ public class style {
     public static boolean enabled = true;
 
     public static void disable() {
-        ChromaConsole.enabled = false;
+        style.enabled = false;
     }
 
     public static void enable() {
-        ChromaConsole.enabled = true;
+        style.enabled = true;
     }
 
     public static String bold() {
